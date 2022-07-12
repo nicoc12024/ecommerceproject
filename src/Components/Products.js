@@ -1,19 +1,21 @@
 import "../StyleSheets/TopSelling.css";
-import TopSellingProducts from "./TopSellingProducts";
+import GridProducts from "./GridProducts";
 
-function TopSelling() {
+function Products({ title, data }) {
+  console.log(data);
+
   return (
     <div className="top-selling container">
       <div className="top">
-        <h2 className="section-title">Top Selling</h2>
+        <h2 className="section-title">{title} </h2>
         <ul className="categories">
           <li>Smartphone</li>
           <li>Laptop</li>
           <li>TV</li>
         </ul>
       </div>
-      <TopSellingProducts />
+      <GridProducts />
     </div>
   );
 }
-export default TopSelling;
+export default Products;

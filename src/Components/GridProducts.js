@@ -1,10 +1,10 @@
 import "../StyleSheets/TopSellingProducts.css";
-import { topSellingArrayData } from "./TopSellingData";
+import { topSellingData } from "./topSellingArray";
 
-function TopSellingProducts() {
+function GridProducts() {
   return (
     <div className="top-selling-products-container container">
-      {topSellingArrayData.map((item) => (
+      {topSellingData.map((item) => (
         <div className="card">
           <img src={item.image} alt="bed" />
           <div className="info">
@@ -35,4 +35,4 @@ function TopSellingProducts() {
     </div>
   );
 }
-export default TopSellingProducts;
+export default GridProducts;
