@@ -20,15 +20,15 @@ function Header() {
           </div>
           <div className="wishListCartMenu">
             <div className="wishList">
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
               <p>Your Wishlist</p>
             </div>
             <div className="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping"></i>
               <p>Your Cart</p>
             </div>
             <div className="menuIcon" onClick={handleMenuActive}>
-              <i class="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-bars"></i>
               <p>Menu</p>
             </div>
           </div>

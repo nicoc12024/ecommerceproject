@@ -42,14 +42,14 @@ function HotDeals() {
       <div className="title">Hot Deals</div>
       <Slider {...settings} className="hotDealsCarousel">
         {carouselDataImages.map((item) => (
-          <div className="card">
+          <div className="card" key={item.id}>
             <img src={item.image} alt="bed" />
             <div className="info">
               <p className="bold">
                 {item.title} <br /> Collection
               </p>
               <p className="uppercase">
-                Shop Now <i class="fa-solid fa-arrow-right"></i>
+                Shop Now <i className="fa-solid fa-arrow-right"></i>
               </p>
             </div>
           </div>

@@ -3,7 +3,8 @@ import Header from "./Components/Header";
 import HotDeals from "./Components/HotDeals";
 import Products from "./Components/Products";
 import ThisWeekOff from "./Components/ThisWeekOff";
-import { topSellingData } from "./Components/topSellingArray";
+import topSellingData from "./Components/topSellingArray";
+import hotDealData from "./Components/hotDealArray";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <HotDeals />
       <Products title="Top Selling" data={topSellingData} />
       <ThisWeekOff />
-      <Products title="Hot Deals" /* array B */ />
+      <Products title="Hot Deals" data={hotDealData} />
     </div>
   );
 }
