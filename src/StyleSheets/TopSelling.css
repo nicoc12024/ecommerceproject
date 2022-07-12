@@ -1,0 +1,33 @@
+.section-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(57, 57, 57);
+  margin-bottom: 0.6rem;
+}
+
+.top-selling {
+  margin-top: 4rem;
+}
+
+.top-selling .top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.top-selling .categories {
+  display: flex;
+}
+.top-selling .categories li {
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 500px) {
+  .top-selling .top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

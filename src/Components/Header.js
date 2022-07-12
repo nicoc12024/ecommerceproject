@@ -34,12 +34,12 @@ function Header() {
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
-              <li>Home</li>
               <li>Hot Deals</li>
-              <li>Categories</li>
-              <li>Laptops</li>
+              <li>Top Selling</li>
               <li>SmartPhones</li>
-              <li>Cameras</li>
+              <li>Laptops</li>
+              <li>Tv</li>
+              <li>Contact Us</li>
             </ul>
           </nav>
         </div>

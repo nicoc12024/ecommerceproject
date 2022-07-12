@@ -7,11 +7,6 @@ import { carouselDataImages } from "./CarouselData";
 function HotDeals() {
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -19,12 +14,12 @@ function HotDeals() {
     autoplaySpeed: 2500,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 700,
         settings: {
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 2500,
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -36,7 +31,7 @@ function HotDeals() {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 2500,
         },
       },
     ],
@@ -53,7 +48,7 @@ function HotDeals() {
               <p className="bold">
                 {item.title} <br /> Collection
               </p>
-              <p>
+              <p className="uppercase">
                 Shop Now <i class="fa-solid fa-arrow-right"></i>
               </p>
             </div>
