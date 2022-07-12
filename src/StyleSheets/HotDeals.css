@@ -1,0 +1,65 @@
+.title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: red;
+  padding: 0.6rem;
+  width: fit-content;
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.hotDealsCarousel {
+  max-width: 600px;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.hotDealsCarousel .card img {
+  margin: 0 auto;
+}
+
+img {
+  width: 200px;
+}
+
+.hotDealsCarousel .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hotDealsCarousel .card .info {
+  padding: 1rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.hotDealsCarousel .card .info p {
+  margin-bottom: 0.8rem;
+}
+
+.hotDealsCarousel .card::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -80%;
+  bottom: 0;
+  right: -20%;
+  background-color: red;
+  transform: rotate(-60deg) translate(2rem, -2rem);
+  opacity: 0.9;
+}
+
+.fa-arrow-right {
+  margin-left: 0.2rem;
+}
