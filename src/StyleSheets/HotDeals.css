@@ -10,9 +10,8 @@
   color: white;
 }
 
-.bold {
-  font-weight: bold;
-  font-size: 1.1rem;
+.fa-arrow-right {
+  margin-left: 0.2rem;
 }
 
 .uppercase {
@@ -68,8 +67,4 @@
   background-color: red;
   transform: rotate(-60deg) translate(2rem, -2rem);
   opacity: 0.9;
-}
-
-.fa-arrow-right {
-  margin-left: 0.2rem;
 }

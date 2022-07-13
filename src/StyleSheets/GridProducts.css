@@ -1,11 +1,11 @@
-.top-selling-products-container {
+.top-grid-products-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   margin: 0 auto 3rem auto;
 }
 
-.top-selling-products-container .card {
+.top-grid-products-container .card {
   border: 1px solid rgb(232, 232, 232);
   padding: 1rem;
   margin: 0 auto;
@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.top-selling-products-container .card .discount {
+.top-grid-products-container .card .discount {
   position: absolute;
   top: 10px;
   background-color: red;
@@ -25,74 +25,78 @@
   color: white !important;
 }
 
-.top-selling-products-container .card .action-buttons {
+.top-grid-products-container .card .action-buttons {
   display: flex;
   width: 100%;
   flex-direction: row;
   text-align: center;
   justify-content: center;
   border-top: 1px solid gray;
-}
-
-.top-selling-products-container .card .action-buttons p {
-  margin-right: 0.8rem;
   padding-top: 1rem;
 }
-.top-selling-products-container .card .action-buttons p i {
+
+.top-grid-products-container .card .action-buttons p i {
   color: rgb(41, 41, 41);
+  margin-right: 0.5rem;
 }
 
-.top-selling-products-container .card img {
-  width: 100%;
-  max-width: 100px;
-}
-
-.top-selling-products-container .card .info p {
+.top-grid-products-container .card .info p {
   margin-bottom: 0.4rem;
 }
 
-.top-selling-products-container .card .info p:first-child {
-  color: rgb(67, 67, 67);
+.top-grid-products-container .card .info .brand {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.top-grid-products-container .card .info .model {
+  font-size: 0.9rem;
   text-transform: uppercase;
+}
+
+.top-grid-products-container .card .info .prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Crimson Text", serif;
+}
+
+.top-grid-products-container .card .info .prices p {
+  margin-right: 0.4rem;
+}
+
+.top-grid-products-container .card div .priceBefore {
+  color: gray;
   font-size: 0.8rem;
+  text-decoration: line-through;
 }
 
-.top-selling-products-container .card img {
+.top-grid-products-container .card img {
   margin: 0 auto;
-}
-
-.red {
-  font-weight: bold;
-  color: red;
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 0.4rem;
 }
 
 @media (min-width: 380px) {
-  .top-selling-products-container {
+  .top-grid-products-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .top-selling-products-container .card {
+  .top-grid-products-container .card {
     max-width: 250px;
     width: 100%;
   }
 
-  .top-selling-products-container .card img {
+  .top-grid-products-container .card img {
     width: 100%;
     max-width: 150px;
   }
 }
 
-@media (min-width: 700px) {
-  .top-selling-products-container {
+@media (min-width: 800px) {
+  .top-grid-products-container {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .top-selling-products-container .card {
-    max-width: 350px;
-    width: 100%;
-  }
-
-  .top-selling-products-container .card img {
-    width: 100%;
-    max-width: 200px;
   }
 }

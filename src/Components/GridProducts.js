@@ -2,24 +2,27 @@ import "../StyleSheets/GridProducts.css";
 
 function GridProducts({ data }) {
   return (
-    <div className="top-selling-products-container container">
+    <div className="top-grid-products-container container">
       {data.map((item) => (
         <div className="card" key={item.id}>
           <img src={item.image} alt="bed" />
           <div className="info">
             {item.discount && <p className="discount">{item.discount}</p>}
-            <p>
-              {item.category} <br />
+            <p className="brand">
+              {item.brand} <br />
             </p>
-            <p className="bold">
+            <p className="bold model">
               {item.model} <br />
             </p>
-            <p className="red">
-              {item.price} <br />
-            </p>
-            <p className="priceBefore">
-              {item.priceBefore} <br />
-            </p>
+            <div className="prices">
+              <p className="red">
+                {item.price} <br />
+              </p>
+              <p className="priceBefore">
+                {item.priceBefore} <br />
+              </p>
+            </div>
+
             <div className="action-buttons">
               <p>
                 <i className="fa-solid fa-heart"></i>

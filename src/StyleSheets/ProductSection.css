@@ -6,36 +6,39 @@
   margin-bottom: 0.6rem;
 }
 
-.priceBefore {
-  color: gray;
-  font-size: 0.8rem;
-  text-decoration: line-through;
-}
-
-.top-selling {
+.top-product-section {
   margin-top: 4rem;
   width: 90%;
 }
 
-.top-selling .top {
+.top-product-section .top {
   display: flex;
   flex-direction: column;
   width: 95%;
   margin: 0 auto 2rem auto;
 }
 
-.top-selling .categories {
+.top-product-section .categories {
   display: flex;
 }
-.top-selling .categories li {
-  margin-right: 2rem;
-  font-size: 1rem;
+.top-product-section .categories li {
+  margin-right: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.top-product-section .categories li:hover {
+  color: red;
 }
 
 @media (min-width: 500px) {
-  .top-selling .top {
+  .top-product-section .top {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .top-product-section .categories li {
+    font-size: 1rem;
   }
 }
