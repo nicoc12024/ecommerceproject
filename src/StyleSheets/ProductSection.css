@@ -6,14 +6,22 @@
   margin-bottom: 0.6rem;
 }
 
+.priceBefore {
+  color: gray;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
 .top-selling {
   margin-top: 4rem;
+  width: 90%;
 }
 
 .top-selling .top {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  width: 95%;
+  margin: 0 auto 2rem auto;
 }
 
 .top-selling .categories {

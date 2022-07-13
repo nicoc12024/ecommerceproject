@@ -1,7 +1,7 @@
-import "../StyleSheets/TopSelling.css";
+import "../StyleSheets/ProductSection.css";
 import GridProducts from "./GridProducts";
 
-function Products({ title, data }) {
+function ProductSection({ title, data }) {
   return (
     <div className="top-selling container">
       <div className="top">
@@ -16,4 +16,4 @@ function Products({ title, data }) {
     </div>
   );
 }
-export default Products;
+export default ProductSection;

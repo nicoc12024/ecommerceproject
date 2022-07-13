@@ -1,4 +1,4 @@
-export default [
+export const hotDealData = [
   {
     id: "5",
     category: "Laptop",
@@ -40,3 +40,5 @@ export default [
       "https://www.elgiganten.se/image/dv_web_D180001002868757/293463/samsung-85-au7175-4k-led-2021--pdp_zoom-3000--pdp_main-960.jpg",
   },
 ];
+
+export default hotDealData;

@@ -48,3 +48,5 @@ export const carouselDataImages = [
       "https://www.elgiganten.se/image/dv_web_D1800010021018658/474931/macbook-air-m2-2022-8512gb-midnight--pdp_zoom-3000--pdp_main-960.jpg",
   },
 ];
+
+export default carouselDataImages;

@@ -1,4 +1,4 @@
-import "../StyleSheets/TopSellingProducts.css";
+import "../StyleSheets/GridProducts.css";
 
 function GridProducts({ data }) {
   return (
@@ -16,6 +16,9 @@ function GridProducts({ data }) {
             </p>
             <p className="red">
               {item.price} <br />
+            </p>
+            <p className="priceBefore">
+              {item.priceBefore} <br />
             </p>
             <div className="action-buttons">
               <p>

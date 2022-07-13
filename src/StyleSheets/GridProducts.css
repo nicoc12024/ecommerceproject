@@ -60,7 +60,8 @@
 .top-selling-products-container .card img {
   margin: 0 auto;
 }
-.top-selling-products-container .card .red {
+
+.red {
   font-weight: bold;
   color: red;
 }
