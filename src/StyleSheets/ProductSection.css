@@ -14,15 +14,17 @@
 .top-product-section .top {
   display: flex;
   flex-direction: column;
-  width: 95%;
   margin: 0 auto 2rem auto;
 }
 
 .top-product-section .categories {
   display: flex;
+  flex-wrap: wrap;
 }
+
 .top-product-section .categories li {
   margin-right: 0.6rem;
+  margin-bottom: 0.2rem;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.2s ease;

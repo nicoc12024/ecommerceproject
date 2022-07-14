@@ -22,7 +22,7 @@
   top: 10px;
   background-color: red;
   padding: 0.2rem 0.4rem;
-  color: white !important;
+  color: white;
 }
 
 .top-grid-products-container .card .action-buttons {
@@ -85,17 +85,12 @@
   }
 
   .top-grid-products-container .card {
-    max-width: 250px;
+    max-width: 200px;
     width: 100%;
-  }
-
-  .top-grid-products-container .card img {
-    width: 100%;
-    max-width: 150px;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 730px) {
   .top-grid-products-container {
     grid-template-columns: repeat(4, 1fr);
   }

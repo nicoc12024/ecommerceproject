@@ -2,7 +2,7 @@ import "../StyleSheets/GridProducts.css";
 
 function GridProducts({ data }) {
   return (
-    <div className="top-grid-products-container container">
+    <div className="top-grid-products-container ">
       {data.map((item) => (
         <div className="card" key={item.id}>
           <img src={item.image} alt="bed" />

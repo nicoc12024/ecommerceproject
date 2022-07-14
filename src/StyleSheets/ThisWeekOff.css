@@ -1,4 +1,5 @@
 .this-week-off {
+  overflow-wrap: anywhere;
   text-align: center;
   padding: 3rem 1rem;
   margin-bottom: 3rem;
