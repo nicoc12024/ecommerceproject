@@ -14,7 +14,7 @@ function HotDeals() {
     autoplaySpeed: 2500,
     responsive: [
       {
-        breakpoint: 700,
+        breakpoint: 600,
         settings: {
           autoplay: true,
           autoplaySpeed: 2500,

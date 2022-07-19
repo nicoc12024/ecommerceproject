@@ -45,7 +45,7 @@
 }
 
 .hotDealsCarousel .card .info {
-  padding: 1rem;
+  margin: 1rem 0 0 1rem;
   color: white;
   position: absolute;
   top: 0;
@@ -60,11 +60,10 @@
 .hotDealsCarousel .card::after {
   content: "";
   position: absolute;
-  top: -10%;
-  left: -80%;
-  bottom: 0;
-  right: -20%;
+  margin: 0.2rem;
+  top: 0;
+  bottom: 0%;
+  width: 55%;
   background-color: red;
-  transform: rotate(-60deg) translate(2rem, -2rem);
   opacity: 0.9;
 }

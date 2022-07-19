@@ -9,7 +9,7 @@ function NewsLetter() {
       <form>
         <input type="email" placeholder="suscribe@me.com" />
         <button type="button">
-          <i class="fa-solid fa-envelope"></i>Suscribe
+          <i className="fa-solid fa-envelope"></i>Suscribe
         </button>
       </form>
     </div>

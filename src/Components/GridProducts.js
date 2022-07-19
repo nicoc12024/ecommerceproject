@@ -1,9 +1,11 @@
 import "../StyleSheets/GridProducts.css";
 
 function GridProducts({ data }) {
+  const dataSliced = data.slice(0, 4);
+
   return (
     <div className="top-grid-products-container ">
-      {data.map((item) => (
+      {dataSliced.map((item) => (
         <div className="card" key={item.id}>
           <img src={item.image} alt="bed" />
           <div className="info">
@@ -22,7 +24,6 @@ function GridProducts({ data }) {
                 {item.priceBefore} <br />
               </p>
             </div>
-
             <div className="action-buttons">
               <p>
                 <i className="fa-solid fa-heart"></i>
