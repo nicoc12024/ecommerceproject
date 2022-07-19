@@ -39,6 +39,28 @@ h1 span {
   font-size: 0.8rem;
 }
 
+.wishListCartMenu .wishList {
+  position: relative;
+}
+
+.wishListCartMenu .wishList .wish-list-items {
+  color: red;
+  position: absolute;
+  top: -25%;
+  left: 62%;
+}
+
+.wishListCartMenu .cart {
+  position: relative;
+}
+
+.wishListCartMenu .cart .cart-items {
+  color: red;
+  position: absolute;
+  top: -25%;
+  left: 66%;
+}
+
 .navBar {
   font-size: 0.9rem;
   background-color: #15161d;
