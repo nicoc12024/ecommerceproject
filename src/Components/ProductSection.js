@@ -12,7 +12,7 @@ function ProductSection({ title, data }) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1500);
   }, [actualData]);
 
   const showSmartphone = () => {

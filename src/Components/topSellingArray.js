@@ -184,5 +184,3 @@ export const topSellingData = [
       " https://www.elgiganten.se/image/dv_web_D180001002929923/414961/samsung-galaxy-s22-5g-smartphone-8128gb-phantom-black--pdp_zoom-3000--pdp_main-960.jpg",
   },
 ];
-
-export default topSellingData;
