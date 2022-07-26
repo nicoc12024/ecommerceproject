@@ -1,54 +1,93 @@
 import "../StyleSheets/ProductSection.css";
-import GridProducts from "./GridProducts";
 import { useState, useEffect } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { getTopSellingProducts } from "./topSellingArray";
+
+// import ClipLoader from "react-spinners/ClipLoader";
 
 function ProductSection({ title, data }) {
-  const [originalData, setOriginalData] = useState(data);
-  const [actualData, setActualData] = useState(originalData);
-  const [loading, setLoading] = useState(false);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, [actualData]);
+    getTopSellingProducts().then((products) => {
+      setProducts(products);
+    });
+  }, []);
 
-  const showSmartphone = () => {
-    setActualData(originalData.filter((item) => item.category === "smartphone"));
-  };
+  // const [loading, setLoading] = useState(false);
 
-  const showLaptop = () => {
-    setActualData(originalData.filter((item) => item.category === "laptop"));
-  };
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // }, [actualData]);
 
-  const showTv = () => {
-    setActualData(originalData.filter((item) => item.category === "tv"));
-  };
+  // const showSmartphone = () => {
+  //   setActualData(originalData.filter((item) => item.category === "smartphone"));
+  // };
 
-  const showBest = () => {
-    setActualData(originalData);
-  };
+  // const showLaptop = () => {
+  //   setActualData(originalData.filter((item) => item.category === "laptop"));
+  // };
+
+  // const showTv = () => {
+  //   setActualData(originalData.filter((item) => item.category === "tv"));
+  // };
+
+  // const showBest = () => {
+  //   setActualData(originalData);
+  // };
 
   return (
     <div className="top-product-section container">
       <div className="top">
         <h2 className="section-title">{title}</h2>
         <ul className="categories">
-          <li onClick={showBest}>Best</li>
-          <li onClick={showSmartphone}>Smartphone</li>
-          <li onClick={showLaptop}>Laptop</li>
-          <li onClick={showTv}>TV</li>
+          <li>Best</li>
+          <li>Smartphone</li>
+          <li>Laptop</li>
+          <li>TV</li>
         </ul>
       </div>
 
       <div className="spinner-center">
-        {loading ? (
+        {/* {loading ? (
           <ClipLoader color={"red"} loading={loading} size={100} />
         ) : (
           <GridProducts data={actualData} />
-        )}
+        )} */}
+        <div className="top-grid-products-container ">
+          {products.map((item) => (
+            <div className="card" key={item.id}>
+              <img src={item.image} alt="bed" />
+              <div className="info">
+                {item.discount && <p className="discount">{item.discount}</p>}
+                <p className="brand">
+                  {item.brand} <br />
+                </p>
+                <p className="bold model">
+                  {item.model} <br />
+                </p>
+                <div className="prices">
+                  <p className="red">
+                    {item.price} <br />
+                  </p>
+                  <p className="priceBefore">
+                    {item.priceBefore} <br />
+                  </p>
+                </div>
+                <div className="action-buttons">
+                  <p>
+                    <i className="fa-solid fa-heart"></i>
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-circle-info"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
