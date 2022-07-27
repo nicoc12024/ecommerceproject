@@ -1,21 +1,21 @@
-function Item({ item }) {
+function Item({ product }) {
   return (
-    <div className="card" key={item.id}>
-      <img src={item.image} alt="bed" />
+    <div className="card" key={product.id}>
+      <img src={product.image} alt="bed" />
       <div className="info">
-        {item.discount && <p className="discount">{item.discount}</p>}
+        {product.discount && <p className="discount">{product.discount}</p>}
         <p className="brand">
-          {item.brand} <br />
+          {product.brand} <br />
         </p>
         <p className="bold model">
-          {item.model} <br />
+          {product.model} <br />
         </p>
         <div className="prices">
           <p className="red">
-            {item.price} <br />
+            {product.price} <br />
           </p>
           <p className="priceBefore">
-            {item.priceBefore} <br />
+            {product.priceBefore} <br />
           </p>
         </div>
         <div className="action-buttons">
