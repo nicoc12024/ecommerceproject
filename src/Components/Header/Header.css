@@ -165,15 +165,8 @@ h1 span {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
   }
   .headerWide i {
     font-size: 1.3rem;
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.4rem;
 }

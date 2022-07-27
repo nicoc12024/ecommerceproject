@@ -95,3 +95,14 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media (min-width: 500px) {
+  .top-product-section .top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-product-section .categories li {
+    font-size: 1rem;
+  }
+}

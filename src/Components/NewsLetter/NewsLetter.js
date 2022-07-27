@@ -1,4 +1,4 @@
-import "../StyleSheets/NewsLetter.css";
+import "./NewsLetter.css";
 
 function NewsLetter() {
   return (
