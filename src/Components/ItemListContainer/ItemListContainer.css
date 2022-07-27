@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
-  margin: 0 auto 3rem auto;
+  margin: 2rem auto 2rem auto;
 }
 
 .top-grid-products-container .card {
@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 180px;
+  max-width: 200px;
   width: 100%;
   position: relative;
 }
@@ -20,24 +20,29 @@
 .top-grid-products-container .card .discount {
   position: absolute;
   top: 10px;
-  background-color: red;
+  background-color: rgb(232, 0, 0);
   padding: 0.2rem 0.4rem;
   color: white;
 }
 
-.top-grid-products-container .card .action-buttons {
+.top-grid-products-container .card .action-button {
   display: flex;
   width: 100%;
   flex-direction: row;
   text-align: center;
   justify-content: center;
-  border-top: 1px solid gray;
-  padding-top: 1rem;
+  border-top: 1px solid rgb(201, 201, 201);
+  padding-top: 0.5rem;
 }
 
-.top-grid-products-container .card .action-buttons p i {
-  color: rgb(41, 41, 41);
-  margin-right: 0.5rem;
+.top-grid-products-container .card .action-button .see-details {
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(232, 0, 0);
+  color: white;
+  cursor: pointer;
 }
 
 .top-grid-products-container .card .info p {
@@ -79,9 +84,10 @@
   margin-bottom: 0.4rem;
 }
 
-@media (min-width: 380px) {
+@media (min-width: 400px) {
   .top-grid-products-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
   }
 
   .top-grid-products-container .card {

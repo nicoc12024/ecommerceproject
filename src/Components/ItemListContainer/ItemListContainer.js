@@ -13,9 +13,9 @@ function ItemListContainer() {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <ItemList products={products} />
-    </>
+    </div>
   );
 }
 export default ItemListContainer;
