@@ -36,9 +36,9 @@ function Header() {
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
-              <li>Top Selling</li>
-              <li>Hot Deals</li>
-              <li>Contact Us</li>
+              <li>Smartphone</li>
+              <li>Laptop</li>
+              <li>Tv</li>
             </ul>
           </nav>
         </div>
@@ -46,10 +46,9 @@ function Header() {
 
       <nav className="newNavBar ">
         <ul className="container">
-          <li>Top Selling</li>
-          <li>Hot Deals</li>
-          <li>Suscribe to Our Newsletter</li>
-          <li>Contact Us</li>
+          <li>Smartphone</li>
+          <li>Laptop</li>
+          <li>Tv</li>
         </ul>
       </nav>
     </>

@@ -1,6 +1,6 @@
 function Item({ product }) {
   return (
-    <div className="card" key={product.id}>
+    <div className="card">
       <img src={product.image} alt="bed" />
       <div className="info">
         {product.discount && <p className="discount">{product.discount}</p>}

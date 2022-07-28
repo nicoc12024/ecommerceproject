@@ -38,6 +38,10 @@
   border: 1px solid rgb(201, 201, 201);
 }
 
+.news-letter form input:focus {
+  outline: none;
+}
+
 .news-letter form button {
   display: flex;
   flex-direction: row;
@@ -53,6 +57,7 @@
   background-color: rgb(232, 0, 0);
   color: white;
   font-weight: 700;
+  cursor: pointer;
 }
 .news-letter form button i {
   margin-right: 0.4rem;

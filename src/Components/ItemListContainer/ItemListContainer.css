@@ -43,6 +43,10 @@
   background-color: rgb(232, 0, 0);
   color: white;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.top-grid-products-container .card .action-button .see-details:hover {
+  opacity: 0.6;
 }
 
 .top-grid-products-container .card .info p {
