@@ -12,10 +12,6 @@ function ItemListContainer() {
     });
   }, []);
 
-  return (
-    <div className="container">
-      <ItemList products={products} />
-    </div>
-  );
+  return <ItemList products={products} className="container" />;
 }
 export default ItemListContainer;
