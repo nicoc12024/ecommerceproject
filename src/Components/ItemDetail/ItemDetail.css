@@ -1,0 +1,48 @@
+.card-item-detail {
+  margin: 0 auto 2rem auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 850px;
+}
+
+.card-item-detail .brand {
+  margin-bottom: 1rem;
+}
+
+.card-item-detail .img-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card-item-detail .img-description img {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.card-item-detail .price button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  background-color: rgb(232, 0, 0);
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.card-item-detail .price button:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 550px) {
+  .card-item-detail .img-description {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

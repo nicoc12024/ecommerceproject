@@ -3,13 +3,35 @@ const products = [
     id: "1",
     brand: "Apple",
     category: "laptop",
-    model: "MacBook Pro",
+    model: "MacBook Pro 14 2021",
+    description:
+      "Uncompromising performance for the most demanding users, it's the MacBook Pro 14 M1 Pro 2021. Its durable chassis made of aluminum encloses a stunning Apple M1 Pro chip to deliver blazing fast performance.",
     price: "$1699",
     priceBefore: "$2999",
     discount: "-40% ",
     image:
-      "https://www.elgiganten.se/image/dv_web_D1800010021018658/474931/macbook-air-m2-2022-8512gb-midnight--pdp_zoom-3000--pdp_main-960.jpg",
+      "https://www.elgiganten.se/image/dv_web_D180001002854402/377600/macbook-pro-14-m1-pro-2021-512gb-space-grey--pdp_zoom-3000--pdp_main-960.jpg",
   },
+];
+
+export const getProducts = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products);
+    }, 1500);
+  });
+};
+
+export const getProductById = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.find((prod) => prod.id === id));
+    }, 500);
+  });
+};
+
+/* 
+,
   {
     id: "2",
     brand: "Samsung",
@@ -150,20 +172,7 @@ const products = [
     image:
       " https://www.elgiganten.se/image/dv_web_D180001002929923/414961/samsung-galaxy-s22-5g-smartphone-8128gb-phantom-black--pdp_zoom-3000--pdp_main-960.jpg",
   },
-];
 
-export const getProducts = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(products);
-    }, 1500);
-  });
-};
 
-export const getProductById = (id) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(products.find((prod) => prod.id === id));
-    }, 500);
-  });
-};
+
+*/

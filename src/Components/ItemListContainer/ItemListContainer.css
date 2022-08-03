@@ -60,7 +60,7 @@
 
 .top-grid-products-container .card .info .model {
   font-size: 0.9rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .top-grid-products-container .card .info .prices {
