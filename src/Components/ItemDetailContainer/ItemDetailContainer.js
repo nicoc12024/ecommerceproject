@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { getProductById } from "../../asyncProducts";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState();
 
+  const { productId } = useParams();
+
   useEffect(() => {
-    getProductById("1")
+    getProductById(productId)
       .then((product) => setProduct(product))
       .catch((error) => {
         console.log(error);
@@ -15,7 +18,6 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <h1>Detalle</h1>
       <ItemDetail {...product} />
     </div>
   );

@@ -1,17 +1,26 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-import { getProducts } from "../../asyncProducts";
+import { getProducts, getProductsByCategory } from "../../asyncProducts";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    getProducts().then((products) => {
-      setProducts(products);
-    });
-  }, []);
+  const { categoryId } = useParams();
 
-  return <ItemList products={products} className="container" />;
+  useEffect(() => {
+    if (!categoryId) {
+      getProducts().then((products) => {
+        setProducts(products);
+      });
+    } else {
+      getProductsByCategory(categoryId).then((products) => {
+        setProducts(products);
+      });
+    }
+  }, [categoryId]);
+
+  return <ItemList products={products} />;
 }
 export default ItemListContainer;

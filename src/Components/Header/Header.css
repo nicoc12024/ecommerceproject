@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
 h1 {
   font-size: 2.4rem;
   text-align: center;
@@ -83,14 +88,17 @@ h1 span {
   padding: 0 1.4rem;
 }
 
-.navBar ul li {
-  padding-bottom: 0.1rem;
-  margin-top: 2rem;
+.navBar ul a {
+  display: block;
+  margin: 1rem 2rem 1rem 0;
   position: relative;
   cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: white;
 }
 
-.navBar ul li::after {
+.navBar ul a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -102,13 +110,13 @@ h1 span {
   transition: width 0.2s ease;
 }
 
-.navBar ul li:hover::after {
+.navBar ul a:hover::after {
   width: 100%;
   left: 0;
   background: red;
 }
 
-.navBar ul li.current {
+.navBar ul a.current {
   border-bottom: 2px solid red;
   color: red;
 }
@@ -132,11 +140,13 @@ h1 span {
     flex-direction: row;
     justify-content: center;
   }
-  .newNavBar ul li {
+  .newNavBar ul a {
     margin: 1rem 2rem 1rem 0;
     position: relative;
     cursor: pointer;
     transition: all 0.2s ease;
+    text-decoration: none;
+    color: black;
   }
 
   .newNavBar ul li::after {

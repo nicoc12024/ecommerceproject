@@ -1,5 +1,6 @@
 import "./Header.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -14,9 +15,11 @@ function Header() {
       <header className="header">
         <div className="container headerWide">
           <div className="name">
-            <h1>
-              Electro Buy<span>.</span>
-            </h1>
+            <Link to="/">
+              <h1>
+                Electro Buy<span>.</span>
+              </h1>
+            </Link>
           </div>
           <div className="wishListCartMenu">
             <div className="wishList">
@@ -36,9 +39,9 @@ function Header() {
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
-              <li>Smartphone</li>
-              <li>Laptop</li>
-              <li>Tv</li>
+              <Link to="/category/smartphone">Smartphone</Link>
+              <Link to="/category/laptop">Laptop</Link>
+              <Link to="/category/tv">Tv</Link>
             </ul>
           </nav>
         </div>
@@ -46,9 +49,9 @@ function Header() {
 
       <nav className="newNavBar ">
         <ul className="container">
-          <li>Smartphone</li>
-          <li>Laptop</li>
-          <li>Tv</li>
+          <Link to="/category/smartphone">Smartphone</Link>
+          <Link to="/category/laptop">Laptop</Link>
+          <Link to="/category/tv">Tv</Link>
         </ul>
       </nav>
     </>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Item({ product }) {
   return (
     <div className="card">
@@ -19,7 +21,9 @@ function Item({ product }) {
           </p>
         </div>
         <div className="action-button">
-          <button className="see-details">See Details</button>
+          <Link to={`/detail/${product.id}`} className="see-details">
+            See Details
+          </Link>
         </div>
       </div>
     </div>
