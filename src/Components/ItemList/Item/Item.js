@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../../App";
 
 function Item({ product }) {
+  const valor = useContext(CartContext);
+
   return (
     <div className="card">
       <img src={product.image} alt="bed" />

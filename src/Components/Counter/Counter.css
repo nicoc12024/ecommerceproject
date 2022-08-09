@@ -1,0 +1,37 @@
+.counter {
+  margin: 1rem auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.counter-operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.counter h1 {
+  padding: 0 2rem;
+  font-size: 1.8rem;
+}
+.counter .operation {
+  font-size: 1rem;
+  border: none;
+  background-color: red;
+  padding: 0.3rem 0.6rem;
+  color: white;
+  border-radius: 45px;
+}
+
+.addToCart {
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  background-color: rgb(232, 0, 0);
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}

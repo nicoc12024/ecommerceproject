@@ -25,19 +25,15 @@
 
 .card-item-detail .price button {
   padding: 0.7rem 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0 auto;
   border: none;
   display: block;
   border-radius: 5px;
-  background-color: rgb(232, 0, 0);
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-}
-
-.card-item-detail .price button:hover {
-  opacity: 0.6;
 }
 
 @media (min-width: 550px) {
