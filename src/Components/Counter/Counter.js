@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Counter.css";
 
-function Counter({ stock, onAdd }) {
-  const [count, setCount] = useState(1);
+function Counter({ stock, onAdd, initial = 1 }) {
+  const [count, setCount] = useState(initial);
 
   const increase = () => {
-    if (count < stock) {
+    if (count < stock) { 
       setCount(count + 1);
     }
   };

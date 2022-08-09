@@ -5,30 +5,12 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import NewsLetter from "./Components/NewsLetter/NewsLetter";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, createContext } from "react";
-
-export const CartContext = createContext();
+import { CartContextProvider } from "./Context/CartContext";
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  const addItem = (productToAdd) => {
-    setCart([...cart, productToAdd]);
-  };
-
-  const getQuantity = () => {
-    let acc = 0;
-
-    cart.forEach((prod) => {
-      acc += prod.quantity;
-    });
-
-    return acc;
-  };
-
   return (
     <div className="App">
-      <CartContext.Provider value={{ cart, addItem }}>
+      <CartContextProvider>
         <BrowserRouter>
           <Header />
           <Routes>
@@ -40,7 +22,7 @@ function App() {
           <NewsLetter />
           <Footer />
         </BrowserRouter>
-      </CartContext.Provider>
+      </CartContextProvider>
     </div>
   );
 }

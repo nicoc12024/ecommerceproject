@@ -1,17 +1,27 @@
 import "./ItemDetail.css";
 import Counter from "../Counter/Counter";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../Context/CartContext";
 
-function ItemDetail({ model, image, description, price, category, stock }) {
-  const [quantity, setQuantity] = useState(0);
-  console.log(quantity);
+function ItemDetail({ id, model, image, description, price, category, stock }) {
+  const [quantityToAdd, setQuantityToAdd] = useState(0);
+
+  const { addItem, getProductQuantity } = useContext(CartContext);
 
   const handleOnAdd = (quantity) => {
-    console.log("agregue al carrito");
-    console.log(quantity);
-    setQuantity(quantity);
+    setQuantityToAdd(quantity);
+    const productToAdd = {
+      id,
+      model,
+      price,
+      quantity,
+    };
+
+    addItem(productToAdd);
   };
+
+  const productQuantity = getProductQuantity(id);
 
   return (
     <div className="card-item-detail container">
@@ -23,8 +33,8 @@ function ItemDetail({ model, image, description, price, category, stock }) {
       <div className="price">
         <button>Price {price}</button>
       </div>
-      {quantity === 0 ? (
-        <Counter stock={stock} onAdd={handleOnAdd} />
+      {quantityToAdd === 0 ? (
+        <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity} />
       ) : (
         <Link to="/cart">Finalizar Compra</Link>
       )}

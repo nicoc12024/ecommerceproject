@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../../../App";
 
 function Item({ product }) {
-  const valor = useContext(CartContext);
+  const handleCLick = (e) => {
+    e.stopPropagation();
+  };
 
   return (
-    <div className="card">
+    <div className="card" onClick={handleCLick}>
       <img src={product.image} alt="bed" />
       <div className="info">
         {product.discount && <p className="discount">{product.discount}</p>}

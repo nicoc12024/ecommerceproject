@@ -1,9 +1,14 @@
 import "./Header.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../Context/CartContext";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
+
+  const { getQuantity } = useContext(CartContext);
+
+  const quantity = getQuantity();
 
   // Toggle Menu
   const handleMenuActive = () => {
@@ -30,7 +35,7 @@ function Header() {
             <div className="cart">
               <i className="fa-solid fa-cart-shopping"></i>
               <p>Your Cart</p>
-              <p className="cart-items">(10)</p>
+              <p className="cart-items">{quantity}</p>
             </div>
             <div className="menuIcon" onClick={handleMenuActive}>
               <i className="fa-solid fa-bars"></i>
