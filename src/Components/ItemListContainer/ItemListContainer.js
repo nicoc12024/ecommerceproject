@@ -9,6 +9,7 @@ function ItemListContainer() {
 
   const { categoryId } = useParams();
 
+  // Llama a la api y me trae todos productos o me los trae filtrado por categoría
   useEffect(() => {
     const asyncFunction = categoryId ? getProductsByCategory : getProducts;
 
@@ -31,6 +32,10 @@ function ItemListContainer() {
     // }
   }, [categoryId]);
 
-  return <ItemList products={products} />;
+  return (
+    <div className="item-list-container">
+      <ItemList products={products} />
+    </div>
+  );
 }
 export default ItemListContainer;

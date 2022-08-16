@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
         <BrowserRouter>
-          <Header />
+          <Header /> 
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />

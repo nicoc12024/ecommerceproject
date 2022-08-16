@@ -17,7 +17,7 @@ function ItemDetailContainer() {
   }, []);
 
   return (
-    <div>
+    <div className="item-detail-container">
       <ItemDetail {...product} />
     </div>
   );

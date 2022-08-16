@@ -1,10 +1,11 @@
 import Item from "./Item/Item";
+import "./ItemList.css";
 
 function ItemList({ products }) {
   return (
-    <div className="top-grid-products-container">
-      {products.map((item) => (
-        <Item key={item.id} product={item} />
+    <div className="item-list">
+      {products.map((product) => (
+        <Item key={product.id} product={product} />
       ))}
     </div>
   );

@@ -1,0 +1,90 @@
+.card-item {
+  border: 1px solid rgb(232, 232, 232);
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.card-item .discount {
+  position: absolute;
+  top: 10px;
+  background-color: rgb(232, 0, 0);
+  padding: 0.2rem 0.4rem;
+  color: white;
+}
+.card-item .action-button {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  border-top: 1px solid rgb(201, 201, 201);
+  padding-top: 0.5rem;
+}
+
+.card-item .action-button .see-details {
+  padding: 0.3rem 0.8rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(232, 0, 0);
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+}
+
+.card-item .action-button .see-details:hover {
+  opacity: 0.6;
+}
+
+.card-item .info p {
+  margin-bottom: 0.4rem;
+}
+
+.card-item .info .brand {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.card-item .info .model {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.card-item .info .prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Crimson Text", serif;
+}
+
+.card-item .info .prices p {
+  margin-right: 0.4rem;
+}
+
+.card-item div .priceBefore {
+  color: gray;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.card-item img {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100px;
+  margin-bottom: 0.4rem;
+}
+
+@media (min-width: 400px) {
+  .card-item {
+    max-width: 200px;
+    width: 100%;
+  }
+}

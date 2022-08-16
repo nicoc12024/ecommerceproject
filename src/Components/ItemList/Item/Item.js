@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Item.css";
 
 function Item({ product }) {
   const handleCLick = (e) => {
@@ -6,7 +7,7 @@ function Item({ product }) {
   };
 
   return (
-    <div className="card" onClick={handleCLick}>
+    <div className="card-item" onClick={handleCLick}>
       <img src={product.image} alt="bed" />
       <div className="info">
         {product.discount && <p className="discount">{product.discount}</p>}
