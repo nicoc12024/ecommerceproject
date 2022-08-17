@@ -19,7 +19,7 @@ function Item({ product }) {
         </p>
         <div className="prices">
           <p className="red">
-            {product.price} <br />
+            ${product.price} <br />
           </p>
           <p className="priceBefore">
             {product.priceBefore} <br />

@@ -3,10 +3,12 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 
+import Cart from "../Cart/Cart";
+
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
 
-  const { getQuantity } = useContext(CartContext);
+  const { getQuantity, cart } = useContext(CartContext);
 
   const quantity = getQuantity();
 
@@ -27,13 +29,15 @@ function Header() {
             </Link>
           </div>
           <div className="wishListCartMenu">
-            <Link to="/cart">
-              <div className="cart">
-                <i className="fa-solid fa-cart-shopping"></i>
-                <p>Your Cart</p>
-                <p className="cart-items">{quantity}</p>
-              </div>
-            </Link>
+            {cart.length === 0 ? null : (
+              <Link to="/cart">
+                <div className="cart">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <p>Your Cart</p>
+                  <p className="cart-items">{quantity}</p>
+                </div>
+              </Link>
+            )}
             <div className="menuIcon" onClick={handleMenuActive}>
               <i className="fa-solid fa-bars"></i>
               <p>Menu</p>

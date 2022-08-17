@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 function Cart() {
   const { cart, clearCart, removeItem } = useContext(CartContext);
-  console.log(cart);
 
   return (
     <div className="cart-page">

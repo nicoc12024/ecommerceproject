@@ -35,7 +35,7 @@ function ItemDetail({ id, model, image, description, price, category, stock }) {
         <p>{description}</p>
       </div>
       <div className="price">
-        <button>Price {price}</button>
+        <button>Price ${price}</button>
       </div>
       {quantityToAdd === 0 ? (
         <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity} />
