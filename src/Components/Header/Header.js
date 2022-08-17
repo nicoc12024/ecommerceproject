@@ -27,16 +27,13 @@ function Header() {
             </Link>
           </div>
           <div className="wishListCartMenu">
-            <div className="wishList">
-              <i className="fa-regular fa-heart"></i>
-              <p>Your Wishlist</p>
-              <p className="wish-list-items">(4)</p>
-            </div>
-            <div className="cart">
-              <i className="fa-solid fa-cart-shopping"></i>
-              <p>Your Cart</p>
-              <p className="cart-items">{quantity}</p>
-            </div>
+            <Link to="/cart">
+              <div className="cart">
+                <i className="fa-solid fa-cart-shopping"></i>
+                <p>Your Cart</p>
+                <p className="cart-items">{quantity}</p>
+              </div>
+            </Link>
             <div className="menuIcon" onClick={handleMenuActive}>
               <i className="fa-solid fa-bars"></i>
               <p>Menu</p>

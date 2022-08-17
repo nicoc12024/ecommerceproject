@@ -6,11 +6,13 @@ import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { categoryId } = useParams();
 
   // Llama a la api y me trae todos productos o me los trae filtrado por categoría
   useEffect(() => {
+    setLoading(true);
     const asyncFunction = categoryId ? getProductsByCategory : getProducts;
 
     asyncFunction(categoryId)
@@ -19,18 +21,15 @@ function ItemListContainer() {
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-
-    // if (!categoryId) {
-    //   getProducts().then((products) => {
-    //     setProducts(products);
-    //   });
-    // } else {
-    //   getProductsByCategory(categoryId).then((products) => {
-    //     setProducts(products);
-    //   });
-    // }
   }, [categoryId]);
+
+  if (loading) {
+    return <h1>Cargando productos...</h1>;
+  }
 
   return (
     <div className="item-list-container">
