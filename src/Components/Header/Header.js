@@ -19,28 +19,13 @@ function Header() {
   return (
     <>
       <header className="header">
-        <div className="container headerWide">
+        <div className="container">
           <div className="name">
             <Link to="/">
               <h1>
                 Electro Buy<span>.</span>
               </h1>
             </Link>
-          </div>
-          <div className="cartLogoMenu">
-            {cart.length === 0 ? null : (
-              <Link to="/cart">
-                <div className="cart">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                  <p>Your Cart</p>
-                  <p className="cart-quantity">{quantity}</p>
-                </div>
-              </Link>
-            )}
-            <div className="menuIcon" onClick={handleMenuActive}>
-              <i className="fa-solid fa-bars"></i>
-              <p>Menu</p>
-            </div>
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
@@ -53,18 +38,29 @@ function Header() {
               <Link to="/category/tv" onClick={handleMenuActive}>
                 Tv
               </Link>
+              <Link to="/" onClick={handleMenuActive}>
+                Home
+              </Link>
             </ul>
           </nav>
+          <div className="cartLogoMenu">
+            {cart.length === 0 ? null : (
+              <Link to="/cart">
+                <div className="cart">
+                  <i className="fa-solid fa-cart-shopping">
+                    <p className="cart-quantity">{quantity}</p>
+                  </i>
+                  <p>Your Cart</p>
+                </div>
+              </Link>
+            )}
+            <div className="menuIcon" onClick={handleMenuActive}>
+              <i className="fa-solid  fa-bars"></i>
+              <p>Menu</p>
+            </div>
+          </div>
         </div>
       </header>
-
-      <nav className="navBarWide ">
-        <ul className="container">
-          <Link to="/category/smartphone">Smartphone</Link>
-          <Link to="/category/laptop">Laptop</Link>
-          <Link to="/category/tv">Tv</Link>
-        </ul>
-      </nav>
     </>
   );
 }
