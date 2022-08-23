@@ -26,7 +26,7 @@ function Item({ product }) {
           </p>
         </div>
         <div className="action-button">
-          <Link to={`/detail/${product.id}`} className="see-details">
+          <Link to={`/detail/${product.id}`} className="btnRed">
             See Details
           </Link>
         </div>

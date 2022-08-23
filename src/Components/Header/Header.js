@@ -29,6 +29,9 @@ function Header() {
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
+              <Link to="/" onClick={handleMenuActive}>
+                Home
+              </Link>
               <Link to="/category/smartphone" onClick={handleMenuActive}>
                 Smartphone
               </Link>
@@ -38,25 +41,31 @@ function Header() {
               <Link to="/category/tv" onClick={handleMenuActive}>
                 Tv
               </Link>
-              <Link to="/" onClick={handleMenuActive}>
-                Home
-              </Link>
             </ul>
           </nav>
           <div className="cartLogoMenu">
-            {cart.length === 0 ? null : (
+            {cart.length === 0 ? (
+              <Link to="/cart">
+                <div className="cart">
+                  <i className="fa-solid fa-cart-shopping">
+                    <p className="cart-quantity">0</p>
+                  </i>
+                  <p className="cartIconStatus">Cart is empty</p>
+                </div>
+              </Link>
+            ) : (
               <Link to="/cart">
                 <div className="cart">
                   <i className="fa-solid fa-cart-shopping">
                     <p className="cart-quantity">{quantity}</p>
                   </i>
-                  <p>Your Cart</p>
+                  <p className="cartIconStatus">Your Cart</p>
                 </div>
               </Link>
             )}
             <div className="menuIcon" onClick={handleMenuActive}>
               <i className="fa-solid  fa-bars"></i>
-              <p>Menu</p>
+              <p className="cartIconStatus">Menu</p>
             </div>
           </div>
         </div>

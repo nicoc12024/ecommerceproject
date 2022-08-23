@@ -27,22 +27,6 @@
   padding-top: 0.5rem;
 }
 
-.card-item .action-button .see-details {
-  padding: 0.3rem 0.8rem;
-  margin-top: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(232, 0, 0);
-  color: white;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  text-decoration: none;
-}
-
-.card-item .action-button .see-details:hover {
-  opacity: 0.6;
-}
-
 .card-item .info p {
   margin-bottom: 0.4rem;
 }

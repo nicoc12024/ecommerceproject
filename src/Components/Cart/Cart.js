@@ -8,18 +8,18 @@ function Cart() {
   let total = getTotal();
 
   return (
-    <div className="cart-page">
+    <div className="cartPage">
       {cart.length === 0 ? (
         <>
           <h2>The cart is empty</h2>
           <Link to="/">
-            <h4 className="checkout">Return to Home Page</h4>
+            <h4 className="btnRed">Return to Home Page</h4>
           </Link>
         </>
       ) : (
         <>
           {cart.map((prod) => (
-            <div className="single-product" key={prod.id}>
+            <div className="singleProduct" key={prod.id}>
               <div>
                 <img src={prod.image} alt="" />
               </div>
@@ -28,15 +28,17 @@ function Cart() {
               <div>Price: ${prod.price}</div>
               <div>Subtotal: ${prod.price * prod.quantity}</div>
               <div>
-                <button onClick={() => removeItem(prod.id)}>Remove</button>
+                <button className="btnRed" onClick={() => removeItem(prod.id)}>
+                  Remove
+                </button>
               </div>
             </div>
           ))}
-          <button className="total-cart">Total ${total}</button>
-          <button className="checkout" onClick={clearCart}>
+          <button className="totalCart">Total ${total}</button>
+          <a className="btnRed" onClick={clearCart}>
             Clear Cart
-          </button>
-          <Link to="/checkout" className="checkout">
+          </a>
+          <Link to="/checkout" className="btnRed">
             Checkout
           </Link>
         </>

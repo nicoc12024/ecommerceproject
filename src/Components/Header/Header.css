@@ -35,11 +35,6 @@ h1 span {
   text-align: center;
 }
 
-.cartLogoMenu div p {
-  margin-top: 0.3rem;
-  font-size: 0.8rem;
-}
-
 .cartLogoMenu i {
   cursor: pointer;
 }
@@ -51,8 +46,14 @@ h1 span {
 .cartLogoMenu .cart .cart-quantity {
   color: red;
   position: absolute;
-  top: -80%;
+  top: -50%;
   left: 130%;
+  font-size: 0.65rem;
+}
+
+.cartIconStatus {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
 }
 
 .navBar {
@@ -148,5 +149,14 @@ h1 span {
     text-align: center;
     padding: 0.5rem 0;
     margin: 0 0.4rem;
+    font-size: 1.1rem;
+  }
+
+  .cartLogoMenu .cart .cart-quantity {
+    font-size: 0.7rem;
+  }
+
+  .cartIconStatus {
+    font-size: 0.9rem;
   }
 }
