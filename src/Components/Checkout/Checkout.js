@@ -161,7 +161,7 @@ function Checkout() {
           value={dataOrder.phone}
           required
         ></input>
-        <button className="checkout">Create new order</button>
+        <button className="btnRed">Create new order</button>
       </form>
     </>
   );

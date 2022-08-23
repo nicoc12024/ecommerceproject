@@ -5,7 +5,7 @@ function Counter({ stock, onAdd, initial = 1 }) {
   const [count, setCount] = useState(initial);
 
   const increase = () => {
-    if (count < stock) { 
+    if (count < stock) {
       setCount(count + 1);
     }
   };
@@ -18,7 +18,7 @@ function Counter({ stock, onAdd, initial = 1 }) {
 
   return (
     <div className="counter">
-      <div className="counter-operation">
+      <div className="counterOperations">
         <button className="operation" onClick={decrease}>
           -
         </button>

@@ -7,7 +7,7 @@ function Item({ product }) {
   };
 
   return (
-    <div className="card-item" onClick={handleCLick}>
+    <div className="cardItem" onClick={handleCLick}>
       <img src={product.image} alt="bed" />
       <div className="info">
         {product.discount && <p className="discount">{product.discount}</p>}
@@ -25,7 +25,7 @@ function Item({ product }) {
             {product.priceBefore} <br />
           </p>
         </div>
-        <div className="action-button">
+        <div className="actionButton">
           <Link to={`/detail/${product.id}`} className="btnRed">
             See Details
           </Link>

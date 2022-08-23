@@ -28,9 +28,9 @@ function ItemDetail({ id, model, image, description, price, category, stock }) {
   const productQuantity = getProductQuantity(id);
 
   return (
-    <div className="card-item-detail">
+    <div className="cardItemDetail">
       <h2 className="brand">{model}</h2>
-      <div className="img-and-description-box">
+      <div className="imgAndDescriptionBox">
         <img src={image} alt={category} />
         <p>{description}</p>
       </div>

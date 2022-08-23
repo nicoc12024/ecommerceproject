@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.counter-operation {
+.counterOperations {
   display: flex;
   flex-direction: row;
   align-items: center;

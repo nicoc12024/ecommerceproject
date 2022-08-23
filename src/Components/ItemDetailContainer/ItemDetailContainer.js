@@ -32,7 +32,7 @@ function ItemDetailContainer() {
   }
 
   return (
-    <div className="item-detail-container">
+    <div>
       <ItemDetail {...product} />
     </div>
   );

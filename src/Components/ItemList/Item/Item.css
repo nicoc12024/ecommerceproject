@@ -1,4 +1,4 @@
-.card-item {
+.cardItem {
   border: 1px solid rgb(232, 232, 232);
   padding: 1rem;
   margin: 0 auto;
@@ -10,14 +10,14 @@
   position: relative;
 }
 
-.card-item .discount {
+.cardItem .discount {
   position: absolute;
   top: 10px;
   background-color: rgb(232, 0, 0);
   padding: 0.2rem 0.4rem;
   color: white;
 }
-.card-item .action-button {
+.cardItem .actionButton {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -27,21 +27,21 @@
   padding-top: 0.5rem;
 }
 
-.card-item .info p {
+.cardItem .info p {
   margin-bottom: 0.4rem;
 }
 
-.card-item .info .brand {
+.cardItem .info .brand {
   font-size: 0.9rem;
   color: gray;
 }
 
-.card-item .info .model {
+.cardItem .info .model {
   font-size: 0.9rem;
   text-transform: capitalize;
 }
 
-.card-item .info .prices {
+.cardItem .info .prices {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,17 +49,17 @@
   font-family: "Crimson Text", serif;
 }
 
-.card-item .info .prices p {
+.cardItem .info .prices p {
   margin-right: 0.4rem;
 }
 
-.card-item div .priceBefore {
+.cardItem div .priceBefore {
   color: gray;
   font-size: 0.8rem;
   text-decoration: line-through;
 }
 
-.card-item img {
+.cardItem img {
   margin: 0 auto;
   width: 100%;
   max-width: 100px;
@@ -67,7 +67,7 @@
 }
 
 @media (min-width: 400px) {
-  .card-item {
+  .cardItem {
     max-width: 200px;
     width: 100%;
   }
