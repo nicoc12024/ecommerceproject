@@ -1,11 +1,11 @@
 .card-item-detail {
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 1.6em;
   max-width: 850px;
 }
 
 .card-item-detail .brand {
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-item-detail .img-and-description-box {
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .card-item-detail .img-and-description-box img {
@@ -23,14 +23,14 @@
 }
 
 .card-item-detail .img-and-description-box p {
-  width: 50%;
+  width: 60%;
   margin-bottom: 0.5rem;
 }
 
 .card-item-detail .price button {
   padding: 0.7rem 1.2rem;
   font-size: 1.1rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
   border: none;
   display: block;
   border-radius: 5px;
@@ -38,6 +38,26 @@
   color: black;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+}
+
+.itemDetailCheckout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemDetailCheckout a {
+  text-align: center;
+  width: 60%;
+  border-radius: 5px;
+  margin: 0.2rem;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 550px) {

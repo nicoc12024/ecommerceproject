@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { getProductById } from "../../asyncProducts";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
@@ -29,7 +28,7 @@ function ItemDetailContainer() {
   }, [productId]);
 
   if (loading) {
-    return <h1>Cargando productos...</h1>;
+    return <h1 className="spinner">Loading products...</h1>;
   }
 
   return (

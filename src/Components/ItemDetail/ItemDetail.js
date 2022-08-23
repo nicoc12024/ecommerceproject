@@ -35,12 +35,15 @@ function ItemDetail({ id, model, image, description, price, category, stock }) {
         <p>{description}</p>
       </div>
       <div className="price">
-        <button>Price ${price}</button>
+        <button>Price: ${price}</button>
       </div>
       {quantityToAdd === 0 ? (
         <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity} />
       ) : (
-        <Link to="/cart">Finalizar Compra</Link>
+        <div className="itemDetailCheckout">
+          <Link to="/cart">End buying</Link>
+          <Link to="/">Continue shopping</Link>
+        </div>
       )}
     </div>
   );

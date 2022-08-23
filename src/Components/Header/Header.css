@@ -22,44 +22,30 @@ h1 span {
   color: red;
 }
 
-.wishListCartMenu {
+.cartLogoMenu {
   display: flex;
   justify-content: center;
 }
 
-.wishListCartMenu div {
+.cartLogoMenu div {
   padding: 0 1rem;
   text-align: center;
 }
 
-.wishListCartMenu div p {
+.cartLogoMenu div p {
   margin-top: 0.3rem;
-}
-
-.wishListCartMenu i {
-  cursor: pointer;
-}
-
-.wishListCartMenu p {
   font-size: 0.8rem;
 }
 
-.wishListCartMenu .wishList {
+.cartLogoMenu i {
+  cursor: pointer;
+}
+
+.cartLogoMenu .cart {
   position: relative;
 }
 
-.wishListCartMenu .wishList .wish-list-items {
-  color: red;
-  position: absolute;
-  top: -25%;
-  left: 62%;
-}
-
-.wishListCartMenu .cart {
-  position: relative;
-}
-
-.wishListCartMenu .cart .cart-items {
+.cartLogoMenu .cart .cart-quantity {
   color: red;
   position: absolute;
   top: -25%;
@@ -73,7 +59,6 @@ h1 span {
   top: 0;
   left: -130%;
   bottom: 0;
-  width: 200px;
   transition: all 0.2s ease-in-out;
   z-index: 3;
 }
@@ -121,7 +106,7 @@ h1 span {
   color: red;
 }
 
-.newNavBar {
+.navBarWide {
   display: none;
 }
 
@@ -129,18 +114,18 @@ h1 span {
   .menuIcon {
     display: none;
   }
-  .newNavBar {
+  .navBarWide {
     display: block;
     border-bottom: rgb(221, 221, 221) solid 3px;
   }
-  .newNavBar ul {
+  .navBarWide ul {
     background-color: white;
     color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  .newNavBar ul a {
+  .navBarWide ul a {
     margin: 1rem 2rem 1rem 0;
     position: relative;
     cursor: pointer;
@@ -149,7 +134,7 @@ h1 span {
     color: black;
   }
 
-  .newNavBar ul li::after {
+  .navBarWide ul li::after {
     content: "";
     position: absolute;
     width: 0;
@@ -161,13 +146,13 @@ h1 span {
     transition: all 0.2s ease;
   }
 
-  .newNavBar ul li:hover::after {
+  .navBarWide ul li:hover::after {
     width: 100%;
     left: 0;
     background: red;
   }
 
-  .newNavBar ul li:hover {
+  .navBarWide ul li:hover {
     color: red;
   }
 

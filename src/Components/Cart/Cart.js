@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 function Cart() {
-  const { cart, clearCart, removeItem } = useContext(CartContext);
+  const { cart, clearCart, removeItem, getTotal } = useContext(CartContext);
+  let total = getTotal();
 
   return (
     <div className="cart-page">
@@ -12,7 +13,7 @@ function Cart() {
         <>
           <h2>The cart is empty</h2>
           <Link to="/">
-            <h4>Return to Home Page</h4>
+            <h4 className="checkout">Return to Home Page</h4>
           </Link>
         </>
       ) : (
@@ -31,9 +32,13 @@ function Cart() {
               </div>
             </div>
           ))}
-          <button className="clear-cart" onClick={clearCart}>
+          <button className="total-cart">Total ${total}</button>
+          <button className="checkout" onClick={clearCart}>
             Clear Cart
           </button>
+          <Link to="/checkout" className="checkout">
+            Checkout
+          </Link>
         </>
       )}
     </div>

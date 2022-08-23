@@ -3,10 +3,9 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 
-import Cart from "../Cart/Cart";
-
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   const { getQuantity, cart } = useContext(CartContext);
 
@@ -28,13 +27,13 @@ function Header() {
               </h1>
             </Link>
           </div>
-          <div className="wishListCartMenu">
+          <div className="cartLogoMenu">
             {cart.length === 0 ? null : (
               <Link to="/cart">
                 <div className="cart">
                   <i className="fa-solid fa-cart-shopping"></i>
                   <p>Your Cart</p>
-                  <p className="cart-items">{quantity}</p>
+                  <p className="cart-quantity">{quantity}</p>
                 </div>
               </Link>
             )}
@@ -45,15 +44,21 @@ function Header() {
           </div>
           <nav className={`navBar ${menuActive && "active"} `}>
             <ul>
-              <Link to="/category/smartphone">Smartphone</Link>
-              <Link to="/category/laptop">Laptop</Link>
-              <Link to="/category/tv">Tv</Link>
+              <Link to="/category/smartphone" onClick={handleMenuActive}>
+                Smartphone
+              </Link>
+              <Link to="/category/laptop" onClick={handleMenuActive}>
+                Laptop
+              </Link>
+              <Link to="/category/tv" onClick={handleMenuActive}>
+                Tv
+              </Link>
             </ul>
           </nav>
         </div>
       </header>
 
-      <nav className="newNavBar ">
+      <nav className="navBarWide ">
         <ul className="container">
           <Link to="/category/smartphone">Smartphone</Link>
           <Link to="/category/laptop">Laptop</Link>
