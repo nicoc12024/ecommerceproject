@@ -3,37 +3,22 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import { useAsync } from "../../hooks/useAsync";
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState();
-  const [loading, setLoading] = useState(false);
-
   const { productId } = useParams();
 
-  useEffect(() => {
-    setLoading(true);
+  const getProduct = () => getDoc(doc(db, "products", productId));
 
-    getDoc(doc(db, "products", productId))
-      .then((response) => {
-        const data = response.data();
-        const productAdapted = { id: response.id, ...data };
-        setProduct(productAdapted);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [productId]);
+  const { data, error, isLoading } = useAsync(getProduct, [productId]);
 
-  if (loading) {
-    return <h1 className="spinner">Loading products...</h1>;
+  if (isLoading) {
+    return <h1>Cargando productos...</h1>;
   }
 
   return (
     <div>
-      <ItemDetail {...product} />
+      <ItemDetail {...data} />
     </div>
   );
 }
