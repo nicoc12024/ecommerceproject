@@ -16,7 +16,7 @@ function ItemDetailContainer() {
   if (isLoading) {
     return <h1>Cargando productos...</h1>;
   }
-  console.log(parseData);
+
   return (
     <div>
       <ItemDetail {...parseData} />
