@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useAsync = (asyncFunction, dependencies = []) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
 

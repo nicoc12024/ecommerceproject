@@ -7,7 +7,6 @@ import NotificationContext from "../../Notification/Notification";
 
 function ItemDetail({ id, model, image, description, price, category, stock }) {
   const [quantityToAdd, setQuantityToAdd] = useState(0);
-
   const { addItem, getProductQuantity } = useContext(CartContext);
   const { setNotification } = useContext(NotificationContext);
 
@@ -26,6 +25,7 @@ function ItemDetail({ id, model, image, description, price, category, stock }) {
   };
 
   const productQuantity = getProductQuantity(id);
+  console.log(id);
 
   return (
     <div className="cardItemDetail">
