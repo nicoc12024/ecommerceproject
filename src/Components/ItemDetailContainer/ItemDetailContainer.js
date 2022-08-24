@@ -9,7 +9,7 @@ function ItemDetailContainer() {
 
   const getProduct = () => getDoc(doc(db, "products", productId));
 
-  const { data, error, isLoading } = useAsync(getProduct, [productId]);
+  const { data, isLoading } = useAsync(getProduct, [productId]);
 
   const parseData = data?.data();
 

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export const useAsync = (asyncFunction, dependencies = []) => {
   const [data, setData] = useState();
-  const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -13,12 +12,12 @@ export const useAsync = (asyncFunction, dependencies = []) => {
         setData(response);
       })
       .catch((error) => {
-        setError(error);
+        console.log(error);
       })
       .finally(() => {
         setIsLoading(false);
       });
   }, dependencies);
 
-  return { data, isLoading, error };
+  return { data, isLoading };
 };

@@ -10,7 +10,7 @@ function ItemListContainer() {
 
   const getProductsFromFirestore = () => getProducts(categoryId);
 
-  const { data, error, isLoading } = useAsync(getProductsFromFirestore, [categoryId]);
+  const { data, isLoading } = useAsync(getProductsFromFirestore, [categoryId]);
 
   if (isLoading) {
     return <h1 className="spinner">Loading products...</h1>;

@@ -5,7 +5,6 @@ import CartContext from "../../Context/CartContext";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const [displayMenu, setDisplayMenu] = useState(false);
 
   const { getQuantity, cart } = useContext(CartContext);
 
