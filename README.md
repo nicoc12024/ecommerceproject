@@ -26,4 +26,3 @@ Open http://localhost:3000 to view it in your browser.
 
 https://ecommerceproject-one.vercel.app/
 
-> > > > > > > 084f46ae15eef273abeb64f1bb9c09eb0654bf35
