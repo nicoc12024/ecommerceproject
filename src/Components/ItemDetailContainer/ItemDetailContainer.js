@@ -11,13 +11,15 @@ function ItemDetailContainer() {
 
   const { data, error, isLoading } = useAsync(getProduct, [productId]);
 
+  const parseData = data?.data();
+
   if (isLoading) {
     return <h1>Cargando productos...</h1>;
   }
-
+  console.log(parseData);
   return (
     <div>
-      <ItemDetail {...data} />
+      <ItemDetail {...parseData} />
     </div>
   );
 }
