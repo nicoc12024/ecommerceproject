@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../services/firebase/firestore";
+import NewsLetter from "./NewsLetter/NewsLetter";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -29,9 +30,12 @@ function ItemListContainer() {
   }
 
   return (
-    <div className="itemListContainer">
-      <ItemList products={products} />
-    </div>
+    <>
+      <div className="itemListContainer">
+        <ItemList products={products} />
+      </div>
+      <NewsLetter />
+    </>
   );
 }
 export default ItemListContainer;
