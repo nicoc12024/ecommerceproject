@@ -21,6 +21,7 @@
   padding: 0.3rem 0.6rem;
   color: white;
   border-radius: 45px;
+  cursor: pointer;
 }
 
 .addToCart {
