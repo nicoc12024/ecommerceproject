@@ -1,0 +1,40 @@
+.footer {
+  text-align: center;
+  padding: 3rem 2rem 2rem 2rem;
+  margin: 8rem auto 0 auto;
+  background-color: #15161d;
+  color: #7b8692;
+  position: relative;
+}
+
+.footer__icon-container {
+  margin: 0 auto;
+  position: absolute;
+  top: -1.3rem;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.footer__icon-container i {
+  color: white;
+}
+
+.footer__social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.footer__social-icons li {
+  margin: 0 1rem;
+}
+
+.footer__social-icons i {
+  color: #7b8692;
+}
+
+.footer p a {
+  color: #7b8692;
+}

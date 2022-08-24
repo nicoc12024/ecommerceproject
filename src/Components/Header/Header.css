@@ -2,6 +2,7 @@
   background-color: #15161d;
   color: white;
   padding: 1.5rem 0;
+  margin-bottom: 1rem;
   border-bottom: solid red 3px;
   display: flex;
   flex-direction: column;
