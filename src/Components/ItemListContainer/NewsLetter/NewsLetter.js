@@ -31,8 +31,8 @@ function NewsLetter() {
         <input
           id="message"
           name="message"
-          type="email"
-          placeholder="suscribe@me.com"
+          type="Email"
+          placeholder="Email"
           onChange={handleChange}
           value={email}
           required
