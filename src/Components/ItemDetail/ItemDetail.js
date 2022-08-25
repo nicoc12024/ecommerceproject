@@ -2,13 +2,17 @@ import "./ItemDetail.css";
 import Counter from "../Counter/Counter";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 import NotificationContext from "../../Notification/Notification";
 
-function ItemDetail({ id, model, image, description, price, category, stock }) {
+function ItemDetail({ model, image, description, price, category, stock }) {
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const { addItem, getProductQuantity } = useContext(CartContext);
   const { setNotification } = useContext(NotificationContext);
+  const { productId } = useParams();
+
+  const id = productId;
 
   const handleOnAdd = (quantity) => {
     setQuantityToAdd(quantity);

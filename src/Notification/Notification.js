@@ -2,13 +2,14 @@ import { useState, createContext } from "react";
 
 const Notification = ({ message, severity }) => {
   const notificationStyles = {
-    position: "absolute",
+    position: "fixed",
     top: 50,
     right: 10,
     padding: "10px 20px",
     backgroundColor: severity === "success" ? "green" : "red",
+    borderRadius: "5px",
     color: "white",
-    zIndex: 10,
+    zIndex: 11,
   };
 
   if (message === "") return;
@@ -27,7 +28,7 @@ export const NotificationProvider = ({ children }) => {
     setSeverity(sev);
     setTimeout(() => {
       setMessage("");
-    }, 3500);
+    }, 4000);
   };
 
   return (
