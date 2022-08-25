@@ -1,4 +1,4 @@
-.formOrder {
+.checkout__formOrder {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -6,15 +6,14 @@
   max-width: 500px;
 }
 
-.formOrder input {
+.checkout__formOrder input {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: 5px;
   border: 0.5px solid rgb(203, 203, 203);
 }
 
-.titleCheckout {
+.checkout__titleCheckout {
   margin: 1rem;
   text-align: center;
 }
-

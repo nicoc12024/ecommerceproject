@@ -14,7 +14,7 @@ function ItemDetailContainer() {
   const parseData = data?.data();
 
   if (isLoading) {
-    return <h1>Cargando productos...</h1>;
+    return <h1 className="spinner">Loading product...</h1>;
   }
 
   return (

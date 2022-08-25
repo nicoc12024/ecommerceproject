@@ -2,19 +2,23 @@
   margin: 1rem auto 0 auto;
   width: 100%;
   text-align: center;
-}
-
-.counterOperations {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.counter h1 {
-  padding: 0 2rem;
-  font-size: 1.8rem;
+
+.counter__counterOperations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto 1rem auto;
 }
-.counter .operation {
+.counter__counterOperations h1 {
+  padding: 0 2rem;
+  font-size: 1.6rem;
+}
+.counter__operation {
   font-size: 1rem;
   border: none;
   background-color: red;
@@ -24,7 +28,7 @@
   cursor: pointer;
 }
 
-.addToCart {
+.counter__addToCart {
   padding: 0.4rem 1.2rem;
   font-size: 1rem;
   margin: 0 auto;

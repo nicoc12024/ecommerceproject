@@ -3,10 +3,10 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <a className="footer__icon-container" href="#top">
+      <a className="footer__iconContainer" href="#top">
         <i className="fa-solid fa-angles-up btnRed"></i>
       </a>
-      <ul className="footer__social-icons">
+      <ul className="footer__socialIcons">
         <li>
           <a href="facebook.com">
             <i className="fa-brands fa-facebook fa-2x "></i>

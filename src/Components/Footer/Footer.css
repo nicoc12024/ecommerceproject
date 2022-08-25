@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.footer__icon-container {
+.footer__iconContainer {
   margin: 0 auto;
   position: absolute;
   top: -1.3rem;
@@ -16,22 +16,22 @@
   cursor: pointer;
 }
 
-.footer__icon-container i {
+.footer__iconContainer i {
   color: white;
 }
 
-.footer__social-icons {
+.footer__socialIcons {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.4rem;
 }
 
-.footer__social-icons li {
+.footer__socialIcons li {
   margin: 0 1rem;
 }
 
-.footer__social-icons i {
+.footer__socialIcons i {
   color: #7b8692;
 }
 

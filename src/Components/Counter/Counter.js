@@ -18,16 +18,16 @@ function Counter({ stock, onAdd, initial = 1 }) {
 
   return (
     <div className="counter">
-      <div className="counterOperations">
-        <button className="operation" onClick={decrease}>
+      <div className="counter__counterOperations">
+        <button className="counter__operation" onClick={decrease}>
           -
         </button>
         <h1>{count}</h1>
-        <button className="operation" onClick={increase}>
+        <button className="counter__operation" onClick={increase}>
           +
         </button>
       </div>
-      <button onClick={() => onAdd(count)} className="addToCart">
+      <button onClick={() => onAdd(count)} className="counter__addToCart">
         Add to Cart
       </button>
     </div>

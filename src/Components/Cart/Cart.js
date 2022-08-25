@@ -1,5 +1,5 @@
 import "./Cart.css";
-import CartContext from "../../Context/CartContext";
+import CartContext from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,9 +19,9 @@ function Cart() {
       ) : (
         <>
           {cart.map((prod) => (
-            <div className="singleProduct" key={prod.id}>
+            <div className="cartPage__singleProduct" key={prod.id}>
               <div>
-                <img src={prod.image} alt="" />
+                <img src={prod.image} alt="image of a product" />
               </div>
               <div>Model: {prod.model}</div>
               <div>Quantity: {prod.quantity}</div>

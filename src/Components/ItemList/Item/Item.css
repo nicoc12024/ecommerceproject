@@ -10,14 +10,14 @@
   position: relative;
 }
 
-.cardItem .discount {
+.cardItem__discount {
   position: absolute;
   top: 10px;
   background-color: rgb(232, 0, 0);
   padding: 0.2rem 0.4rem;
   color: white;
 }
-.cardItem .actionButton {
+.cardItem__actionButton {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -27,21 +27,21 @@
   padding-top: 0.5rem;
 }
 
-.cardItem .info p {
+.cardItem__info p {
   margin-bottom: 0.4rem;
 }
 
-.cardItem .info .brand {
+.cardItem__brand {
   font-size: 0.9rem;
   color: gray;
 }
 
-.cardItem .info .model {
+.cardItem__model {
   font-size: 0.9rem;
   text-transform: capitalize;
 }
 
-.cardItem .info .prices {
+.cardItem__prices {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,11 +49,11 @@
   font-family: "Crimson Text", serif;
 }
 
-.cardItem .info .prices p {
+.cardItem__prices p {
   margin-right: 0.4rem;
 }
 
-.cardItem div .priceBefore {
+.cardItem__priceBefore {
   color: gray;
   font-size: 0.8rem;
   text-decoration: line-through;

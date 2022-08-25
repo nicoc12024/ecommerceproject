@@ -1,7 +1,7 @@
 import "./Checkout.css";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import CartContext from "../../Context/CartContext";
+import CartContext from "../../context/CartContext";
 import { db } from "../../services/firebase";
 import {
   addDoc,
@@ -132,11 +132,11 @@ function Checkout() {
   }
 
   return (
-    <>
-      <div className="titleCheckout">
+    <div className="checkout">
+      <div className="checkout__titleCheckout">
         <h1>Checkout</h1>
       </div>
-      <form className="formOrder" onSubmit={handleSubmit}>
+      <form className="checkout__formOrder" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -163,7 +163,7 @@ function Checkout() {
         ></input>
         <button className="btnRed">Create new order</button>
       </form>
-    </>
+    </div>
   );
 }
 export default Checkout;

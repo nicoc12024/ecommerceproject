@@ -4,7 +4,7 @@ import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartContextProvider } from "./Context/CartContext";
+import { CartContextProvider } from "./context/CartContext";
 import { NotificationProvider } from "./Notification/Notification";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Checkout/Checkout";

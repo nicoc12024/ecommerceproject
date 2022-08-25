@@ -3,7 +3,7 @@ import Counter from "../Counter/Counter";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import CartContext from "../../Context/CartContext";
+import CartContext from "../../context/CartContext";
 import NotificationContext from "../../Notification/Notification";
 
 function ItemDetail({ model, image, description, price, category, stock }) {
@@ -32,18 +32,18 @@ function ItemDetail({ model, image, description, price, category, stock }) {
 
   return (
     <div className="cardItemDetail">
-      <h2 className="brand">{model}</h2>
-      <div className="imgAndDescriptionBox">
+      <h2 className="cardItemDetail__brand">{model}</h2>
+      <div className="cardItemDetail__imgAndDescriptionBox">
         <img src={image} alt={category} />
         <p>{description}</p>
       </div>
-      <div className="price">
+      <div className="cardItemDetail__price">
         <button>Price: ${price}</button>
       </div>
       {quantityToAdd === 0 ? (
         <Counter stock={stock} onAdd={handleOnAdd} initial={productQuantity} />
       ) : (
-        <div className="itemDetailCheckout">
+        <div className="cardItemDetail__itemDetailCheckout">
           <Link to="/cart">End buying</Link>
           <Link to="/">Continue shopping</Link>
         </div>
