@@ -16,6 +16,7 @@ import {
 function Checkout() {
   const [isLoading, setIsLoading] = useState(false);
   const [orderCreated, setOrderCreated] = useState(false);
+  const [orderId, setOrderId] = useState();
   const { cart, getQuantity, getTotal, clearCart } = useContext(CartContext);
   const [dataOrder, setDataOrder] = useState({
     name: "",
@@ -102,6 +103,7 @@ function Checkout() {
 
         const orderRef = collection(db, "orders");
         const orderAdded = await addDoc(orderRef, objOrder);
+        setOrderId(orderAdded.id);
 
         clearCart();
 
@@ -120,19 +122,25 @@ function Checkout() {
   };
 
   if (isLoading) {
-    return <h1 className="spinner">Processing your order...</h1>;
+    return (
+      <div className="minWidth">
+        <h1 className="spinner">Processing your order...</h1>;
+      </div>
+    );
   }
 
   if (orderCreated) {
     return (
-      <h1 className="spinner">
-        Thanks for buying with us, you will receive an email shortly.
-      </h1>
+      <div className="minWidth">
+        <h3 className="spinner">
+          {`Thanks for buying with us, your Id number is ${orderId}.`}
+        </h3>
+      </div>
     );
   }
 
   return (
-    <div className="checkout">
+    <div className="minWidth">
       <div className="checkout__titleCheckout">
         <h1>Checkout</h1>
       </div>

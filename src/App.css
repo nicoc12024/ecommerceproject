@@ -28,6 +28,10 @@ ul li {
   color: red;
 }
 
+.minWidth {
+  min-height: 47vh;
+}
+
 .bold {
   font-weight: bold;
   font-size: 1.1rem;

@@ -14,7 +14,11 @@ function ItemDetailContainer() {
   const parseData = data?.data();
 
   if (isLoading) {
-    return <h1 className="spinner">Loading product...</h1>;
+    return (
+      <div className="minWidth">
+        <h1 className="spinner">Loading product...</h1>;
+      </div>
+    );
   }
 
   return (
