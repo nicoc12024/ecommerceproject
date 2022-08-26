@@ -124,7 +124,7 @@ function Checkout() {
   if (isLoading) {
     return (
       <div className="minWidth">
-        <h1 className="spinner">Processing your order...</h1>;
+        <h1 className="spinner">We are processing your order...</h1>;
       </div>
     );
   }
