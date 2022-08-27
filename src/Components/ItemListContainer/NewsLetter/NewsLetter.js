@@ -1,7 +1,9 @@
 import "./NewsLetter.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import NotificationContext from "../../../Notification/Notification";
 
 function NewsLetter() {
+  const { setNotification } = useContext(NotificationContext);
   const [email, setEmail] = useState("");
 
   const isValidEmail = (email) => {
@@ -15,9 +17,9 @@ function NewsLetter() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) {
-      alert("Email is invalid");
+      setNotification("", "Invalid email");
     } else {
-      alert("Thanks for subscribing");
+      setNotification("success", "Thanks for subscribing");
       setEmail("");
     }
   };

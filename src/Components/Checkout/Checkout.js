@@ -2,6 +2,7 @@ import "./Checkout.css";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import CartContext from "../../context/CartContext";
+import NotificationContext from "../../Notification/Notification";
 import { db } from "../../services/firebase";
 import {
   addDoc,
@@ -14,6 +15,7 @@ import {
 } from "firebase/firestore";
 
 function Checkout() {
+  const { setNotification } = useContext(NotificationContext);
   const [isLoading, setIsLoading] = useState(false);
   const [orderCreated, setOrderCreated] = useState(false);
   const [orderId, setOrderId] = useState();
@@ -39,11 +41,8 @@ function Checkout() {
     e.preventDefault();
 
     // Validate form before createOrder
-    if (!isValidEmail(dataOrder.email)) {
-      alert("Email is invalid");
-      return;
-    } else if (isNaN(dataOrder.phone)) {
-      alert("Phone field must be numbers");
+    if (!isValidEmail(dataOrder.email) || isNaN(dataOrder.phone)) {
+      setNotification("", "Invalid phone or email");
       return;
     }
 
@@ -112,7 +111,7 @@ function Checkout() {
           navigate("/");
         }, 4000);
       } else {
-        alert("Out of stock");
+        setNotification("", "Out of stock");
       }
     } catch (error) {
       console.log(error);
