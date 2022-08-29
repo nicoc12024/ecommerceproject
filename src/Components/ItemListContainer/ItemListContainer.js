@@ -15,7 +15,7 @@ function ItemListContainer() {
   if (isLoading) {
     return (
       <div className="minWidth">
-        <h1 className="spinner">Loading products...</h1>;
+        <h1 className="spinner">Loading products...</h1>
       </div>
     );
   }

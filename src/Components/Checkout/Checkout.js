@@ -1,6 +1,6 @@
 import "./Checkout.css";
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 import NotificationContext from "../../Notification/Notification";
 import { db } from "../../services/firebase";
@@ -48,8 +48,6 @@ function Checkout() {
 
     createOrder();
   };
-
-  const navigate = useNavigate();
 
   const totalQuantity = getQuantity();
   const total = getTotal();
@@ -107,9 +105,6 @@ function Checkout() {
         clearCart();
 
         setOrderCreated(true);
-        setTimeout(() => {
-          navigate("/");
-        }, 4000);
       } else {
         setNotification("", "Out of stock");
       }
@@ -123,7 +118,7 @@ function Checkout() {
   if (isLoading) {
     return (
       <div className="minWidth">
-        <h1 className="spinner">We are processing your order...</h1>;
+        <h1 className="spinner">We are processing your order...</h1>
       </div>
     );
   }
@@ -131,9 +126,13 @@ function Checkout() {
   if (orderCreated) {
     return (
       <div className="minWidth">
-        <h3 className="spinner">
-          {`Thanks for buying with us, your Id number is ${orderId}.`}
-        </h3>
+        <div className="orderCreated">
+          <p>Thanks for buying with us.</p>
+          <p>{`Your id number is ${orderId}.`}</p>
+        </div>
+        <Link to="/" className="buttonCenter">
+          Return home
+        </Link>
       </div>
     );
   }
