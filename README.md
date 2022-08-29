@@ -22,6 +22,10 @@ Open http://localhost:3000 to view it in your browser.
 - useContext (React)
 - useParams (React-Router-Dom)
 
+# Deploy
+
+https://ecommerceproject-rouge.vercel.app/
+
 # Demo
 
-https://react-coder-house-final.vercel.app/
+![image](https://github.com/rominabocon/fpreactjs/blob/main/public/demoGif/demo.gif)
