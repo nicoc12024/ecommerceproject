@@ -28,4 +28,4 @@ https://ecommerceproject-rouge.vercel.app/
 
 # Demo
 
-![image](https://github.com/rominabocon/fpreactjs/blob/main/public/demoGif/demo.gif)
+![image](https://github.com/nicoc12024/ecommerceproject/blob/master/public/demoGif/demo.gif)
