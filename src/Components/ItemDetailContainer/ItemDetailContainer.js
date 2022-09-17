@@ -16,7 +16,7 @@ function ItemDetailContainer() {
   if (isLoading) {
     return (
       <div className="minWidth">
-        <h1 className="spinner">Loading product...</h1>;
+        <h1 className="spinner">Loading product...</h1>
       </div>
     );
   }
@@ -24,7 +24,7 @@ function ItemDetailContainer() {
   if (!parseData) {
     return (
       <div className="minWidth">
-        <h1 className="spinner">Error.</h1>;
+        <h1 className="spinner">Error.</h1>
       </div>
     );
   }
