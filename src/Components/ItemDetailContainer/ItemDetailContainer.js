@@ -21,6 +21,14 @@ function ItemDetailContainer() {
     );
   }
 
+  if (!parseData) {
+    return (
+      <div className="minWidth">
+        <h1 className="spinner">Error.</h1>;
+      </div>
+    );
+  }
+
   return (
     <div>
       <ItemDetail {...parseData} />

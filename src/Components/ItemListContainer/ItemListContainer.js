@@ -20,6 +20,14 @@ function ItemListContainer() {
     );
   }
 
+  if (!data) {
+    return (
+      <div className="minWidth">
+        <h1 className="spinner">There are 0 products on stock at the moment.</h1>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="itemListContainer">
